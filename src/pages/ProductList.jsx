@@ -1,39 +1,33 @@
 import React, { useEffect, useState } from "react";
 import ProductCard from "../components/ProductCard";
 
-import axios from "axios"
+import axios from "axios";
+import CardTotal from "../components/CardTotal";
 const ProductList = () => {
-
   const BASE_URL = "https://63f4e5583f99f5855db9e941.mockapi.io/products";
 
-  const [produkte, setProdukte] = useState([])
-  const [error, setError] = useState(false)
-  const [loading, setLoading] = useState(true)
+  const [produkte, setProdukte] = useState([]);
+  const [error, setError] = useState(false);
+  const [loading, setLoading] = useState(true);
 
   const getData = async () => {
     try {
-      const { data } = await axios(
-        BASE_URL
-      );
-      setProdukte(data)
+      const { data } = await axios(BASE_URL);
+      setProdukte(data);
     } catch (e) {
-      setError(true)
+      setError(true);
       console.log(e);
     } finally {
-      setLoading(false)
+      setLoading(false);
     }
+  };
 
-
-  }
-
-  useEffect(() => { getData() }, [])
-
-
-
-
+  useEffect(() => {
+    getData();
+  }, []);
 
   if (error) {
-    return <p>Something went wrong.....</p>
+    return <p>Something went wrong.....</p>;
   }
 
   return (
@@ -45,9 +39,15 @@ const ProductList = () => {
           <>
             <article id="product-panel" className="col-md-6">
               {produkte.map((product) => (
-
-                <ProductCard key={product.id} product={product} getData={getData} />
+                <ProductCard
+                  key={product.id}
+                  product={product}
+                  getData={getData}
+                />
               ))}
+            </article>
+            <article>
+              <CardTotal products={produkte} />
             </article>
           </>
         )}

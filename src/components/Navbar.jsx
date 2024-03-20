@@ -2,9 +2,9 @@ import React from 'react'
 import { NavLink } from "react-router-dom"
 const Navbar = () => {
   return (
-    <nav className="navbar navbar-expand-lg bg-secondary">
+    <nav className="navbar navbar-expand-lg" style={{ background: "#EFBC9B" }}>
       <div className="container-fluid">
-        <span className="navbar-brand text-white">Shopping Card</span>
+        <span className="navbar-brand" style={{ color: "#FF6868", fontWeight: "700" }}>Shopping Card</span>
         <button
           className="navbar-toggler"
           type="button"
@@ -16,10 +16,10 @@ const Navbar = () => {
         >
           <span className="navbar-toggler-icon"></span>
         </button>
-        <div className="collapse navbar-collapse" id="navbarSupportedContent">
+        <div className="collapse navbar-collapse" id="navbarSupportedContent" >
           <ul className="navbar-nav me-auto mb-2 mb-lg-0">
-            <li className="nav-item">
-              <NavLink className="nav-link " aria-current="page" to="/">
+            <li className="nav-item" >
+              <NavLink className="nav-link " aria-current="page" to="/" >
                 Home
               </NavLink>
             </li>

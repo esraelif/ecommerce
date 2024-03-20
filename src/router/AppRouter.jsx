@@ -1,6 +1,6 @@
 import React from 'react'
 import Navbar from '../components/Navbar'
-import { BrowserRouter, Route, Routes } from 'react-router-dom'
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
 import Main from '../pages/Main'
 import About from "../pages/About";
 import NewProduct from "../pages/NewProduct";
@@ -9,7 +9,7 @@ import UpdateProduct from "../pages/UpdateProduct";
 
 const AppRouter = () => {
   return (
-    <BrowserRouter>
+    <Router>
       <Navbar />
 
       <Routes>
@@ -21,7 +21,7 @@ const AppRouter = () => {
         <Route path="/update-product" element={<UpdateProduct />} />
         <Route path="*" element={<Main />} />
       </Routes>
-    </BrowserRouter>
+    </Router>
   );
 }
 

@@ -25,12 +25,12 @@ const NewProduct = () => {
 
 
   return (
-    <div className="container">
+    <div className="container" style={{ background: "#116A7B" }}>
       <article
         id="add-product"
         className="mb-4 mt-4 col col-lg-6 mx-auto border rounded-2 bg-opacity-50 bg-light"
       >
-        <h1 className="text-center"> New Product</h1>
+        <h1 className="text-center fs-1" style={{ color: "#CDC2AE" }}> New Product</h1>
 
         {/* <form onSubmit={handleSubmit} className="p-2">
           <div className="mb-3">

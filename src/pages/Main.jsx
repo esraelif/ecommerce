@@ -1,21 +1,23 @@
 import React from "react";
-import { Navigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 const Main = () => {
-
+  const navigate = useNavigate()
   return (
     <main className="main">
       <div>
         <h1>Welcome to Shopping Cart Application</h1>
         <div className="main-buttons">
-          <button onClick={() => Navigate("/new-product")}
-            className="btn btn-outline-primary px-4"
+          <button onClick={() => navigate("/new-product")}
+            className="btn btn-outline-primary px-4 fs-2"
+            style={{ height: "70px" }}
 
           >
             Add New Product
           </button>
-          <button onClick={() => Navigate("/products")}
-            className="btn btn-primary px-4 ms-3"
+          <button onClick={() => navigate("/products")}
+            className="btn btn-primary px-5 ms-3 fs-2"
+            style={{ height: "70px", color: "#EFBC9B" }}
 
           >
             See Products
