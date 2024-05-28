@@ -1,5 +1,5 @@
+![e-commerce](https://github.com/esraelif/ecommerce/blob/main/src/assets/shopping.gif)
 ## Description
-
 Project aims to create a Shopping Cart for an e-commerce App.
 
 ## Project Skeleton
